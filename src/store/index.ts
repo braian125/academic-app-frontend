@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { ICareerState } from "./modules/career";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
-});
+// eslint-disable-next-line
+export interface IRootState {
+  career: ICareerState;
+}
+
+export default new Vuex.Store<IRootState>({});
